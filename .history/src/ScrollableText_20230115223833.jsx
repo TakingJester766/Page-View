@@ -30,6 +30,7 @@ const ScrollableText = ({text}) => {
           );
         })}
       </div>
+      <div className="scroll-tracker" style={{height: `${100 * pageCount}%`}}></div>
     </div>
   );
 

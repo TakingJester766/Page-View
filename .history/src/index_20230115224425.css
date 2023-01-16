@@ -74,7 +74,7 @@ button:focus-visible {
   overflow: hidden;
   padding: 20px; /* add some padding for the content */
   box-sizing: border-box; /* include the padding and border in the total width and height */
-  border: 1px solid #ccc; /* add a border */
+  border: none;
   font-size: 14px; /* adjust the font size to your preference */
   font-family: Arial, sans-serif; /* adjust the font family to your preference */
   line-height: 1.5; /* adjust the line height to your preference */

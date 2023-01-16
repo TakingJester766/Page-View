@@ -11,7 +11,6 @@ const ScrollableText = ({text}) => {
 
   return (
     <div>
-      <div className="scroll-container" style={{overflow: 'auto', height: '500px'}} onScroll={handleScroll}>
         {Array.from({ length: pageCount }, (_, i) => {
           let start = i * charactersPerPage;
           let end = (i + 1) * charactersPerPage;
@@ -22,16 +21,16 @@ const ScrollableText = ({text}) => {
           }
           return (
             <div className={`page ${i === currentPage ? 'visible' : 'hidden'}`} key={i}>
-              <div className="text-container">
+              <div className="text-container" style={{overflow: 'auto', height: '500px'}} onScroll={handleScroll}>
                 {currentText}
                 {i !== pageCount - 1 && <div className="page-break"></div>}
               </div>
             </div>
           );
         })}
-      </div>
     </div>
-  );
+);
+
 
 }
 

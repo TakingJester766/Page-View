@@ -6,7 +6,7 @@ const ScrollableText = ({text}) => {
   const pageCount = Math.ceil(text.length / charactersPerPage);
 
   const handleScroll = (event) => {
-    setCurrentPage(Math.floor(event.target.scrollTop / event.target.scrollHeight));
+    setCurrentPage(Math.floor(event.target.scrollTop / event.target.clientHeight));
   };
 
   return (
@@ -30,6 +30,7 @@ const ScrollableText = ({text}) => {
           );
         })}
       </div>
+      <div className="scroll-tracker" style={{height: `${100 * pageCount}%`}}></div>
     </div>
   );
 
